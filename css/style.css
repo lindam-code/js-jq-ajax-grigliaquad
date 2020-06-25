@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.row {
+  display: flex;
+  justify-content: center;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid blue;
+  text-align: center;
+  line-height: 100px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.bg_yellow {
+  background-color: yellow;
+}
+.bg_green {
+  background-color: green;
+}
