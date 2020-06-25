@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  for (var i = 0; i < 36; i++) {
+    $('.wrapper').append('<div class="square"></div>');
+  };
+
   $('.square').click(function(){
 
     var quadratoCliccato = this;

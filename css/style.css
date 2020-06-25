@@ -3,12 +3,15 @@
   padding: 0;
   margin: 0;
 }
-.row {
+.wrapper {
   display: flex;
   justify-content: center;
+  width: 600px;
+  flex-wrap: wrap;
+  margin: auto;
 }
 .square {
-  width: 100px;
+  flex-basis: 100px;
   height: 100px;
   border: 1px solid blue;
   text-align: center;
