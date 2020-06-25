@@ -1,12 +1,15 @@
 $(document).ready(function(){
+  // Crea griglia 6 x 6 in modo dinamico
   for (var i = 0; i < 36; i++) {
     $('.wrapper').append('<div class="square"></div>');
   };
 
-  $('.square').click(function(){
-
+  // Ad ogni click su un quadrato, genera un numero random
+  // se il numero è minore o uguale a 5, il qudrato diventa giallo
+  // altrimenti diventa verde
+  $(document).on('click','.square', function(){
     var quadratoCliccato = this;
-
+    // richiama API di Boolean che genera un numero random da 1 a 9
     $.ajax(
       {
         url: "https://flynn.boolean.careers/exercises/api/random/int",
