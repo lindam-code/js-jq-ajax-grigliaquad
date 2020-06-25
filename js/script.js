@@ -1,8 +1,17 @@
 $(document).ready(function(){
-  // Crea griglia 6 x 6 in modo dinamico
+  // Crea griglia 6 x 6 in modo dinamico con javascript e Jquery
+  // for (var i = 0; i < 36; i++) {
+  //   $('.wrapper').append('<div class="square"></div>');
+  // };
+
+  // Crea griglia 6 x 6 con Handlerbars
+  var source = document.getElementById("entry-template").innerHTML;
+  var template = Handlebars.compile(source);
   for (var i = 0; i < 36; i++) {
-    $('.wrapper').append('<div class="square"></div>');
-  };
+    var singleSquare = template();
+    $('.wrapper').append(singleSquare);
+  }
+
 
   // Ad ogni click su un quadrato, genera un numero random
   // se il numero è minore o uguale a 5, il qudrato diventa giallo
